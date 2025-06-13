@@ -1,0 +1,84 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* ✅ Task 2B: Hamburger Menu Styles */
+.navbar {
+  background-color: #4B0082;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hamburger logic */
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #4B0082;
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+}
+
+/* ✅ Task 2A: Responsive Layout Section */
+.responsive-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 20px;
+}
+
+.box {
+  background-color: #6A0DAD;
+  color: white;
+  padding: 40px;
+  flex: 1 1 200px;
+  text-align: center;
+  border-radius: 8px;
+}
